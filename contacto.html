@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Bella Lash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: white;
+        color: #764ba2;
+        padding: 12px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .back-button:hover {
+        background: #764ba2;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .header-section h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .header-section p {
+        color: #666;
+        font-size: 16px;
+    }
+
+    .contact-info {
+        background: linear-gradient(135deg, #e8d5f2 0%, #d4a5e8 100%);
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .contact-info h3 {
+        color: #6b3d82;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .contact-info p {
+        color: #444;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .contact-info a {
+        color: #764ba2;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .controls {
+        width: 100%;
+        background: #f5f5f5;
+        padding: 14px 16px;
+        border-radius: 8px;
+        border: 2px solid #e0e0e0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: #333;
+        transition: all 0.3s ease;
+    }
+
+    .controls:focus {
+        outline: none;
+        border-color: #764ba2;
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+    }
+
+    .controls::placeholder {
+        color: #999;
+    }
+
+    textarea.controls {
+        min-height: 150px;
+        resize: vertical;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .boton {
+        width: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        padding: 16px;
+        color: white;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+        margin-top: 10px;
+    }
+
+    .boton:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+    }
+
+    .boton:active {
+        transform: translateY(0);
+    }
+
+    .info-text {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .form-container {
+            padding: 30px 20px;
+        }
+
+        .header-section h1 {
+            font-size: 28px;
+        }
+
+        .back-button {
+            position: static;
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <a href="index.html" class="back-button">← Volver al inicio</a>
+
+
+<div class="form-container">
+    <div class="header-section">
+        <h1>✨ Contáctanos</h1>
+        <p>Estaremos encantados de leer tu mensaje.</p>
+    </div>
+    
+    <div class="contact-info">
+        <h3>💜 Información de Contacto</h3>
+        <p>📱 WhatsApp: <a href="https://wa.me/523841154412">33 1299 7699</a></p>
+        <p>📍 Tala, Jalisco, México</p>
+        <p><strong>Elisa Navarro - Techno Lash Artist Certificada</strong></p>
+    </div>
+    
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="nombre">Nombre Completo *</label>
+            <input class="controls" type="text" name="nombre" id="nombre" 
+                   placeholder="Ingresa tu nombre completo" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="telefono">Teléfono *</label>
+            <input class="controls" type="tel" name="telefono" id="telefono" 
+                   placeholder="Ej. 333 444 5555" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="servicio">Servicio de Interés</label>
+            <select class="controls" name="servicio" id="servicio">
+                <option value="">Selecciona un servicio (opcional)</option>
+                <option value="Extensiones Clásicas">Extensiones Clásicas</option>
+                <option value="Extensiones Volumen">Extensiones Volumen</option>
+                <option value="Extensiones Híbridas">Extensiones Híbridas</option>
+                <option value="Relleno">Relleno (Retoque)</option>
+                <option value="Lifting de Pestañas">Lifting de Pestañas</option>
+                <option value="Tinte de Pestañas">Tinte de Pestañas</option>
+                <option value="Curso de Certificación">Curso de Certificación</option>
+                <option value="Información General">Información General</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea class="controls" name="mensaje" id="mensaje" 
+                      placeholder="Escribe tu mensaje aquí... (Fecha para cita, preguntas sobre cursos, información adicional, etc.)" required></textarea>
+        </div>
+        
+        <button class="boton" type="submit">Enviar por WhatsApp 💬</button>
+        <p class="info-text">Responderemos tu mensaje lo más pronto posible 💜</p>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const telefono = document.getElementById('telefono').value;
+        const servicio = document.getElementById('servicio').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        let mensajeWhatsApp = `¡Hola! Me llamo *${nombre}*%0A%0A` +
+            `📱 Teléfono: ${telefono}%0A`;
+        
+        if (servicio) {
+            mensajeWhatsApp += `💅 Servicio de interés: ${servicio}%0A`;
+        }
+        
+        mensajeWhatsApp += `%0A📝 Mensaje:%0A${mensaje}`;
+        
+        const numeroWhatsApp = '523841154412';
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeWhatsApp}`;
+        
+        window.open(urlWhatsApp, '_blank');
+    });
+</script>
+
+</body>
+</html>
